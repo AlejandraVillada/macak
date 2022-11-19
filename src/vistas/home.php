@@ -5,8 +5,6 @@ $_SESSION['title']='MACAK| Home ';
 
 ?>
 
-
-
 <section>
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
