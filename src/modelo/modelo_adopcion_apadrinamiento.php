@@ -1,8 +1,8 @@
 <?php
 
-require_once "modeloAbstractoDB.php";
+require_once "modelo_conexion.php";
 
-class mascotas extends ModeloAbstractoDB
+class mascotas extends ModeloConexionDB
 {
 
     private $IdMascota;
@@ -31,7 +31,8 @@ class mascotas extends ModeloAbstractoDB
 			";
 
         $this->obtener_resultados_query();
-        return $this->rows;
+        $resultado=$this->rows;
+        return $resultado;
     }
 
     public function consultar($id = '')

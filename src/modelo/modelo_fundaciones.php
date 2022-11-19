@@ -1,8 +1,8 @@
 <?php
 
-require_once "modeloAbstractoDB.php";
+require_once "modelo_conexion.php";
 
-class fundaciones extends ModeloAbstractoDB
+class fundaciones extends ModeloConexionDB
 {
 
     private $IdFundacion;
@@ -27,9 +27,10 @@ class fundaciones extends ModeloAbstractoDB
 			FROM fundaciones
             ORDER BY id
 			";
-
         $this->obtener_resultados_query();
-        return $this->rows;
+         $result = $this->rows; 
+       
+        return  $result;
     }
 
     public function consultar($id = '')

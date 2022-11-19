@@ -8,9 +8,9 @@
 
     <!-- Cartas de fundaciones -->
     <section class="fundaciones">
-        <div class="titulo">FUNDACIONES ASOCIADAS A MACAK</div>
+        <div class="titulo text-center mt-5"><b>FUNDACIONES ASOCIADAS A MACAK</b></div>
         <hr>
-        <div id="fundacion">
+        <div id="fundacion" class="row">
             
         </div>
     </section>

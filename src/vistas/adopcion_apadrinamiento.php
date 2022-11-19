@@ -20,9 +20,9 @@
 
     <!-- Cartas de fundaciones -->
     <section class="adopcion">
-        <div class="titulo">Adopcion y Apadrinamiento</div>
+        <div class="titulo text-center mt-5"><b>ADOPCION Y APADRINAMIENTO</b></div>
         <hr>
-        <div id="adopcion_apadrinamiento">
+        <div id="adopcion_apadrinamiento" class="row">
            
         </div>
     </section>
