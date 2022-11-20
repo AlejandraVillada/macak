@@ -6,16 +6,16 @@
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-12 pt-4  pr-4 d-flex-justify-content-center">
                 <div class="row p-1 ">
-                    <div class="col d-flex justify-content-center"><img src="public/img/facebook.png" alt=""></div>
-                    <div class="col"><img src="public/img/logotipo-de-instagram.png" alt=""></div>
+                    <div class="col d-flex justify-content-end"><img src="public/img/facebook.png" alt=""></div>
+                    <div class="col d-flex justify-content-start"><img src="public/img/logotipo-de-instagram.png" alt=""></div>
                 </div>
-                <div class="row     p-1">
-                    <div class="col  d-flex justify-content-center"><img src="public/img/whatsapp.png" alt=""></div>
-                    <div class="col"><img src="public/img/signo-de-twitter.png" alt=""></div>
+                <div class="row p-1">
+                    <div class="col d-flex justify-content-end"><img src="public/img/whatsapp.png" alt=""></div>
+                    <div class="col d-flex justify-content-start"><img src="public/img/signo-de-twitter.png" alt=""></div>
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">b</div>
-            <div class="col-lg-4 col-md-6 col-sm-12 m-0 p-0 pt-2  d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 m-0 p-0 pt-2  d-flex justify-content-end">
                 <img src="public/img/logo.png" alt="" style="width: 220px ; border-radius:150px;">
             </div>
         </div>
