@@ -36,7 +36,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class=" bg-primary-plantilla  ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/Mascota1.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -47,7 +47,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class="bg-primary-plantilla ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/Mascota2.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -58,7 +58,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class="bg-primary-plantilla ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/Mascota3.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -69,7 +69,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class="bg-primary-plantilla ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/Mascota4.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -87,23 +87,24 @@ $_SESSION['title']='MACAK| Home ';
 
 <section>
     <div class="row ">
-        <div class="col-lg-12 col-sm-6 col-md-6 d-flex justify-content-center">
-            <div class=" col-lg-3 col-sm-12 col-md-12 m-2">
-                <div class="row"><img src="public/img/logo.png" style="width: 150px;" alt="" srcset=""></div>
+        <div class="col-lg-12 col-sm-10 col-md-10 d-flex justify-content-center">
+            <div class="col-lg-3 col-sm-10 col-md-10 m-2">
+                <div class="row"><img src="public/img/Mascota2.png" style="width: 200px;" alt="" srcset=""></div>
                 <div class="row">
                     <h4>Fundación ...</h4>
                 </div>
                 <div class="row"> Descripción</div>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-12 m-2">
-                <div class="row"><img src="public/img/logo.png" style="width: 150px;" alt="" srcset=""></div>
+            <div class="col-lg-3 col-sm-10 col-md-10 m-2">
+                <div class="row"><img src="public/img/Mascota1.png" style="width: 200px;" alt="" srcset=""></div>
+               
                 <div class="row">
                     <h4>Fundación ...</h4>
                 </div>
                 <div class="row"> Descripción</div>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-12 m-2">
-                <div class="row"><img src="public/img/logo.png" style="width: 150px;" alt="" srcset=""></div>
+            <div class="col-lg-3 col-sm-10 col-md-10 m-2">
+                <div class="row"><img src="public/img/Mascota4.png" style="width: 200px;" alt="" srcset=""></div>
                 <div class="row">
                     <h4>Fundación ...</h4>
                 </div>
