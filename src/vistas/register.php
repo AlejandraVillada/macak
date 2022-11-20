@@ -73,7 +73,7 @@
                 </div>
                 <div class="row justify-content-center mt-3">
                     <input type="hidden" name="action" value="new_user">
-                    <input type="submit" value="Registrarse" class="btn  bg-secondary-plantilla">
+                    <input type="submit" value="Registrarse" class="btn  bg-secondary-plantilla text-white text-bold">
 
                 </div>
                 <div class="d-flex justify-content-center row text-center   ">
