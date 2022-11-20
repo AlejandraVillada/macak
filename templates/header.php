@@ -29,7 +29,7 @@
                         <a class="item nav-link listar activar_boton" href="src/vistas/fundaciones.php">Fundaciones Asociadas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="item nav-link listar activar_boton" href="src/vistas/adopcion.php">Adopción y
+                        <a class="item nav-link listar activar_boton" href="src/vistas/adopcion_apadrinamiento.php">Adopción y
                             Apadrinamiento</a>
                     </li>
                     <li class="nav-item">
