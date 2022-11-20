@@ -36,7 +36,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class=" bg-primary-plantilla  ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/Mascota1.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -47,7 +47,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class="bg-primary-plantilla ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/Mascota2.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -58,7 +58,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class="bg-primary-plantilla ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/Mascota3.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -69,7 +69,7 @@ $_SESSION['title']='MACAK| Home ';
             <div class="col">
                 <div class="bg-primary-plantilla ">
                     <div class="row d-flex justify-content-center">
-                        <img src="public/img/logo.png" alt="" style="width: 200px ; border-radius:150px;">
+                        <img src="public/img/Mascota4.png" alt="" style="width: 200px ; border-radius:150px;">
 
                     </div>
                     <div class="row d-flex justify-content-center">
