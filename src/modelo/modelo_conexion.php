@@ -34,7 +34,7 @@
 				// or die(mysqli_errno($this->conexion)." : " 
 				// .mysqli_error($this->conexion)."  | Query=".$this->query);
 				$resultado = $this->conexion->affected_rows;
-				// echo($resultado);
+				// var_dump($this->conexion);
 				$this->cerrar_conexion();
 				return $resultado;
 		    } catch(Exception $e) {
