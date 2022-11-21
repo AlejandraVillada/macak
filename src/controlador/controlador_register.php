@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . "/../modelo/modelo_register.php";
+include_once __DIR__ . "/../modelo/modelo_user.php";
 header('Content-Type: application/json');
 
 // ini_set('display_errors', 1);

@@ -3,6 +3,8 @@ $(' li a.listar').on('click', function(e) {
     // $('#contenido li ').on('click', function(e) {
     //     e.preventDefault();
     // });
+    $('#sesion_iniciada').fadeOut();
+
     var aID = $(this).attr('href');
 
     const el = document.querySelectorAll('.activar_boton');

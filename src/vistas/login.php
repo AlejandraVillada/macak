@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <label for="">Usuario</label>
-                    <input class="form-control m-2" type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+                    <input class="form-control m-2" type="text" name="user" id="user" placeholder="user" required>
                 </div>
                 <div class="row">
                     <label for="">Contraseña</label>
@@ -56,8 +56,10 @@
         </div>
     </div>
 </div>
+<script src="public/js/users.js"></script>
 
 <script>
+    $(document).ready(login);
     $('#registro').on('click', function(e) {
         e.preventDefault();
         var aID = 'src/vistas/register.php';

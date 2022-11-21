@@ -1,3 +1,4 @@
+<?php session_start();?>
 <style>
     .carta_general {
         background-repeat: no-repeat;
@@ -30,61 +31,43 @@
                 <div class="row text-center">
                     <h2>MACAK</h2>
                     <br>
-                    <h6>Registro de Usuarios </h6>
+                    <h6>Perfil de Usuario </h6>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col">
-                        <input required type="radio" name="usertype" id="" value="">
-                        <label for="">Fundaciones </label>
-                    </div>
-                    <div class="col" required>
-                        <input type="radio" name="usertype" id="">
-                        <label for="">Invitados </label>
-                    </div>
-                </div>
-                <hr>
+
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Nombre Completo</label>
-                        <input type="text" required class="form-control m-2" name="name">
+                        <input type="text" required class="form-control m-2" name="name" readonly value="<?= $_SESSION['name']?>">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Dirección</label>
-                        <input type="text" required class="form-control m-2" name="direccion">
+                        <input type="text" required class="form-control m-2" name="direccion" value="<?=$_SESSION['direccion'] ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Usuario</label>
-                        <input type="text" required class="form-control m-2" name="user">
+                        <input type="text" required class="form-control m-2" name="user" readonly value="<?=$_SESSION['username'] ?>">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Contraseña</label>
-                        <input type="text" required class="form-control m-2" name="password">
+                        <input type="password" required class="form-control m-2" name="password" value="<?=$_SESSION['pass'] ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">email</label>
-                        <input type="text" required class="form-control m-2" name="email">
+                        <input type="text" required class="form-control m-2" name="email" readonly value="<?=$_SESSION['email'] ?>">
                     </div>
-
+                   
                 </div>
                 <div class="row justify-content-center mt-3">
                     <input type="hidden" name="action" value="new_user">
-                    <input type="submit" value="Registrarse" class="btn  bg-secondary-plantilla text-white text-bold">
+                    <input type="submit" value="Actualizar Datos" class="btn  bg-secondary-plantilla text-white text-bold">
 
                 </div>
-                <div class="d-flex justify-content-center row text-center   ">
-                    <div class="row">
-                        <span>
-                            <a href="" style="color: white !important;">Cerrar Sesión</a>
-                        </span>
-                    </div>
-                    <br>
-
-                </div>
+                
             </form>
         </div>
     </div>
