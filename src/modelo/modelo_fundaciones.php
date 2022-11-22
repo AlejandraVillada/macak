@@ -5,14 +5,15 @@ require_once "modelo_conexion.php";
 class fundaciones extends ModeloConexionDB
 {
 
-    private $IdFundacion;
-    private $Nit;
-    private $Nombre;
-    private $Descricpcion;
-    private $Direccion;
-    private $Telefono;
-    private $NumeroCuenta;
-    private $TipoCuenta;
+    private $id;
+    private $nit;
+    private $nombre;
+    private $descripcion;
+    private $direccion;
+    private $telefono;
+    private $URL_imagen;
+    private $numero_cuenta;
+    private $tipo_cuenta;
 
     public function __construct()
     {
@@ -37,9 +38,9 @@ class fundaciones extends ModeloConexionDB
     {
         if ($id != ''):
             $this->query = "
-			    SELECT id,nit,nombre,descripcion,direccion,telefono,numero_cuenta,tipo_cuenta
+			    SELECT id,nit,nombre,descripcion,direccion,telefono,URL_imagen,numero_cuenta,tipo_cuenta
 			    FROM fundaciones
-	            WHERE IdFundacion = '$id'";
+	            WHERE id = '$id'";
             $this->obtener_resultados_query();
         endif;
         if (count($this->rows) == 1):
@@ -102,165 +103,183 @@ class fundaciones extends ModeloConexionDB
 
 
 
-    
 
     /**
-     * Get the value of IdFundacion
+     * Get the value of id
      */ 
-    public function getIdFundacion()
+    public function getId()
     {
-        return $this->IdFundacion;
+        return $this->id;
     }
 
     /**
-     * Set the value of IdFundacion
+     * Set the value of id
      *
      * @return  self
      */ 
-    public function setIdFundacion($IdFundacion)
+    public function setId($id)
     {
-        $this->IdFundacion = $IdFundacion;
+        $this->id = $id;
 
         return $this;
     }
 
     /**
-     * Get the value of Nit
+     * Get the value of nit
      */ 
-    public function getNitFundacion()
+    public function getNit()
     {
-        return $this->Nit;
+        return $this->nit;
     }
 
     /**
-     * Set the value of Nit
+     * Set the value of nit
      *
      * @return  self
      */ 
-    public function setNitFundacion($Nit)
+    public function setNit($nit)
     {
-        $this->Nit = $Nit;
-
-        return $this;
-    }
-
-   
-    /**
-     * Get the value of Descricpcion
-     */ 
-    public function getDescricpcion()
-    {
-        return $this->Descricpcion;
-    }
-
-    /**
-     * Set the value of Descricpcion
-     *
-     * @return  self
-     */ 
-    public function setDescricpcion($Descricpcion)
-    {
-        $this->Descricpcion = $Descricpcion;
+        $this->nit = $nit;
 
         return $this;
     }
 
     /**
-     * Get the value of Direccion
-     */ 
-    public function getDireccion()
-    {
-        return $this->Direccion;
-    }
-
-    /**
-     * Set the value of Direccion
-     *
-     * @return  self
-     */ 
-    public function setDireccion($Direccion)
-    {
-        $this->Direccion = $Direccion;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Telefono
-     */ 
-    public function getTelefono()
-    {
-        return $this->Telefono;
-    }
-
-    /**
-     * Set the value of Telefono
-     *
-     * @return  self
-     */ 
-    public function setTelefono($Telefono)
-    {
-        $this->Telefono = $Telefono;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of NumeroCuenta
-     */ 
-    public function getNumeroCuenta()
-    {
-        return $this->NumeroCuenta;
-    }
-
-    /**
-     * Set the value of NumeroCuenta
-     *
-     * @return  self
-     */ 
-    public function setNumeroCuenta($NumeroCuenta)
-    {
-        $this->NumeroCuenta = $NumeroCuenta;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of TipoCuenta
-     */ 
-    public function getTipoCuenta()
-    {
-        return $this->TipoCuenta;
-    }
-
-    /**
-     * Set the value of TipoCuenta
-     *
-     * @return  self
-     */ 
-    public function setTipoCuenta($TipoCuenta)
-    {
-        $this->TipoCuenta = $TipoCuenta;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of Nombre
+     * Get the value of nombre
      */ 
     public function getNombre()
     {
-        return $this->Nombre;
+        return $this->nombre;
     }
 
     /**
-     * Set the value of Nombre
+     * Set the value of nombre
      *
      * @return  self
      */ 
-    public function setNombre($Nombre)
+    public function setNombre($nombre)
     {
-        $this->Nombre = $Nombre;
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of descricpcion
+     */ 
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * Set the value of descricpcion
+     *
+     * @return  self
+     */ 
+    public function setDescripcion($descricpcion)
+    {
+        $this->descricpcion = $descripcion;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of direccion
+     */ 
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * Set the value of direccion
+     *
+     * @return  self
+     */ 
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of telefono
+     */ 
+    public function getTelefono()
+    {
+        return $this->telefono;
+    }
+
+    /**
+     * Set the value of telefono
+     *
+     * @return  self
+     */ 
+    public function setTelefono($telefono)
+    {
+        $this->telefono = $telefono;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of numero_cuenta
+     */ 
+    public function getNumero_cuenta()
+    {
+        return $this->numero_cuenta;
+    }
+
+    /**
+     * Set the value of numero_cuenta
+     *
+     * @return  self
+     */ 
+    public function setNumero_cuenta($numero_cuenta)
+    {
+        $this->numero_cuenta = $numero_cuenta;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of tipo_cuenta
+     */ 
+    public function getTipo_cuenta()
+    {
+        return $this->tipo_cuenta;
+    }
+
+    /**
+     * Set the value of tipo_cuenta
+     *
+     * @return  self
+     */ 
+    public function setTipo_cuenta($tipo_cuenta)
+    {
+        $this->tipo_cuenta = $tipo_cuenta;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of URL_imagen
+     */ 
+    public function getURL_imagen()
+    {
+        return $this->URL_imagen;
+    }
+
+    /**
+     * Set the value of URL_imagen
+     *
+     * @return  self
+     */ 
+    public function setURL_imagen($URL_imagen)
+    {
+        $this->URL_imagen = $URL_imagen;
 
         return $this;
     }

@@ -45,20 +45,21 @@ switch ($_GET['accion']) {
         $fundacion = new fundaciones();
         $fundacion->consultar($datos['codigo']);
 
-        if ($fundacion->getIdFundacion() == null) {
+        if ($fundacion->getId() == null) {
             $respuesta = array(
                 'respuesta' => 'no existe',
             );
         } else {
             $respuesta = array(
-                'codigo' => $fundacion->getIdFundacion(),
+                'codigo' => $fundacion->getId(),
                 'nit' => $fundacion->getNit(),
-                'nombre' => $fundacion->getNombreFundacion(),
+                'nombre' => $fundacion->getNombre(),
                 'descripcion' => $fundacion->getDescripcion(),
                 'direccion' => $fundacion->getDireccion(),
                 'telefono' => $fundacion->getTelefono(),
-                'numero_cuenta' => $fundacion->getNumeroCuenta(),
-                'tipo_cuenta' => $fundacion->getTipoCuenta(),
+                'url_imagen' => $fundacion->getURL_imagen(),
+                'numero_cuenta' => $fundacion->getNumero_cuenta(),
+                'tipo_cuenta' => $fundacion->getTipo_cuenta(),
                 'respuesta' => 'existe',
             );
         }

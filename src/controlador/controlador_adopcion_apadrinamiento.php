@@ -15,6 +15,30 @@ switch ($_GET['accion']) {
         echo json_encode(array('data' => $listado), JSON_UNESCAPED_UNICODE);
         break;
     
-
+        case 'consultar':
+            $mascota = new mascotas();
+            $mascota->consultar($datos['codigo']);
+    
+            if ($mascota->getId() == null) {
+                $respuesta = array(
+                    'respuesta' => 'no existe',
+                );
+            } else {
+                $respuesta = array(
+                    'codigo' => $mascota->getId(),
+                    'id_fundacion' => $mascota->getId_fundacion(),
+                    'nombre' => $mascota->getNombre(),
+                    'descripcion' => $mascota->getDescripcion(),
+                    'edad' => $mascota->getEdad(),
+                    'tipo' => $mascota->getTipo(),
+                    'raza' => $mascota->getRaza(),
+                    'url_imagen' => $mascota->getURL_imagen(),
+                    'estado' => $mascota->getEstado(),
+                    'activo' => $mascota->getActivo(),
+                    'respuesta' => 'existe',
+                );
+            }
+            echo json_encode($respuesta);
+            break;
 
 }

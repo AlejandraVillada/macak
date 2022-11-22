@@ -39,8 +39,8 @@ class mascotas extends ModeloConexionDB
     public function consultar($id = '')
     {
         if ($id != ''):
-            $this->query = "
-            id, id_fundacion, nombre, descripcion, edad, tipo,raza, estado, activo
+            $this->query ="Select
+                id, id_fundacion, nombre, descripcion, edad, tipo,raza,URL_imagen, estado, activo
 			    FROM pets
 	            WHERE id = '$id'";
             $this->obtener_resultados_query();
@@ -50,6 +50,56 @@ class mascotas extends ModeloConexionDB
                 $this->$propiedad = $valor;
             endforeach;
         endif;
+
+    }
+
+    public function nuevo($datos = array())
+    {
+        if (array_key_exists('IdCliente', $datos)):
+            foreach ($datos as $campo => $valor):
+                $$campo = $valor;
+            endforeach;
+            $Nit = utf8_decode($Nit);
+            $Nombre = utf8_decode($Nombre);
+            $Descripcion = utf8_decode($Descripcion);
+            $Direccion = utf8_decode($Direccion);
+            $Telefono = utf8_decode($Telefono);
+            $NumeroCuenta = utf8_decode($NumeroCuenta);
+            $TipoCuenta = utf8_decode($TipoCuenta);
+            $this->query = "
+						INSERT INTO fundaciones
+						(id,nit,nombre,descripcion,direccion,telefono,numero_cuenta,tipo_cuenta)
+						VALUES
+						('$Nit', '$Nombre', '$Descripcion', '$Direccion', '$Telefono', '$NumeroCuenta', '$TipoCuenta')
+						";
+            $resultado = $this->ejecutar_query_simple();
+            return $resultado;
+        endif;
+    }
+    public function editar($datos = array())
+    {
+        foreach ($datos as $campo => $valor):
+            $$campo = $valor;
+        endforeach;
+      
+        $this->query = "
+			UPDATE fundaciones
+			SET nit = '$Nit',
+            nombre = '$Nombre',
+			descripcion = '$Descripcion',
+			direccion = '$Direccion',
+			telefono = '$Telefono',
+			numero_cuenta = '$NumeroCuenta',
+			tipo_cuenta = '$TipoCuenta'
+			WHERE IdFundacion = '$IdFundacion'
+			";
+        $resultado = $this->ejecutar_query_simple();
+        return $resultado;
+
+    }
+
+    public function borrar()
+    {
 
     }
 
