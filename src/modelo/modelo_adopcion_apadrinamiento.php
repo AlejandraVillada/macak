@@ -5,15 +5,16 @@ require_once "modelo_conexion.php";
 class mascotas extends ModeloConexionDB
 {
 
-    private $IdMascota;
-    private $IdFundacion;
-    private $Nombre;
-    private $Descricpcion;
-    private $Edad;
-    private $Tipo;
-    private $Raza;
-    private $Estado;
-    private $Activo;
+    private $id;
+    private $id_fundacion;
+    private $nombre;
+    private $descripcion;
+    private $edad;
+    private $tipo;
+    private $raza;
+    private $URL_imagen;
+    private $estado;
+    private $activo;
 
     public function __construct()
     {
@@ -24,7 +25,7 @@ class mascotas extends ModeloConexionDB
     {
         $this->query = "
 			SELECT pets.id, pets.id_fundacion,fundaciones.nombre, pets.nombre, pets.descripcion, pets.edad, pets.tipo,
-            pets.raza, pets.estado, pets.activo
+            pets.raza,pets.URL_imagen, pets.estado, pets.activo
 			FROM pets
             Inner join fundaciones on(pets.id_fundacion=fundaciones.id)
             ORDER BY pets.nombre ASC
@@ -39,8 +40,7 @@ class mascotas extends ModeloConexionDB
     {
         if ($id != ''):
             $this->query = "
-            id, id_fundacion, nombre, descripcion, edad, tipo,
-            raza, estado, activo
+            id, id_fundacion, nombre, descripcion, edad, tipo,raza, estado, activo
 			    FROM pets
 	            WHERE id = '$id'";
             $this->obtener_resultados_query();
@@ -53,239 +53,204 @@ class mascotas extends ModeloConexionDB
 
     }
 
-    public function nuevo($datos = array())
-    {
-        if (array_key_exists('IdMascota', $datos)):
-            foreach ($datos as $campo => $valor):
-                $$campo = $valor;
-            endforeach;
-            $IdFundacion = utf8_decode($IdFundacion);
-            $Nombre = utf8_decode($Nombre);
-            $Descripcion = utf8_decode($Descripcion);
-            $Edad = utf8_decode($Edad);
-            $Telefono = utf8_decode($Telefono);
-            $Tipo = utf8_decode($Tipo);
-            $Raza = utf8_decode($Raza);
-            $Estado = utf8_decode($Estado);
-            $Activo = utf8_decode($Activo);
-            $this->query = "
-						INSERT INTO pets
-						(id, id_fundacion, nombre, descripcion, edad, tipo,
-                        raza, estado, activo)
-						VALUES
-						('$IdMascota', '$IdFundacion', '$Nombre', '$Descripcion', '$Edad', '$Tipo', '$Raza', '$Estado', '$Activo')
-						";
-            $resultado = $this->ejecutar_query_simple();
-            return $resultado;
-        endif;
-    }
-    public function editar($datos = array())
-    {
-        foreach ($datos as $campo => $valor):
-            $$campo = $valor;
-        endforeach;
-      
-        $this->query = "
-			UPDATE pets
-			SET id_fundacion = '$IdFundacion',
-            nombre = '$Nombre',
-			descripcion = '$Descripcion',
-			Edad = '$Edad',
-			tipo = '$Tipo',
-			Raza = '$Raza',
-			Estado = '$Estado',
-            Activo = '$Activo'
-			WHERE IdMascota = '$IdMascota'
-			";
-        $resultado = $this->ejecutar_query_simple();
-        return $resultado;
-
-    }
-
-    public function borrar()
-    {
-
-    }
-
-
-
+    
 
     /**
-     * Get the value of IdMascota
+     * Get the value of id
      */ 
-    public function getIdMascota()
+    public function getId()
     {
-        return $this->IdMascota;
+        return $this->id;
     }
 
     /**
-     * Set the value of IdMascota
+     * Set the value of id
      *
      * @return  self
      */ 
-    public function setIdMascota($IdMascota)
+    public function setId($id)
     {
-        $this->IdMascota = $IdMascota;
+        $this->id = $id;
 
         return $this;
     }
 
     /**
-     * Get the value of IdFundacion
+     * Get the value of id_fundacion
      */ 
-    public function getIdFundacion()
+    public function getId_fundacion()
     {
-        return $this->IdFundacion;
+        return $this->id_fundacion;
     }
 
     /**
-     * Set the value of IdFundacion
+     * Set the value of id_fundacion
      *
      * @return  self
      */ 
-    public function setIdFundacion($IdFundacion)
+    public function setId_fundacion($id_fundacion)
     {
-        $this->IdFundacion = $IdFundacion;
+        $this->id_fundacion = $id_fundacion;
 
         return $this;
     }
 
     /**
-     * Get the value of Nombre
+     * Get the value of nombre
      */ 
     public function getNombre()
     {
-        return $this->Nombre;
+        return $this->nombre;
     }
 
     /**
-     * Set the value of Nombre
+     * Set the value of nombre
      *
      * @return  self
      */ 
-    public function setNombre($Nombre)
+    public function setNombre($nombre)
     {
-        $this->Nombre = $Nombre;
+        $this->nombre = $nombre;
 
         return $this;
     }
 
     /**
-     * Get the value of Descricpcion
+     * Get the value of descripcion
      */ 
-    public function getDescricpcion()
+    public function getDescripcion()
     {
-        return $this->Descricpcion;
+        return $this->descripcion;
     }
 
     /**
-     * Set the value of Descricpcion
+     * Set the value of descripcion
      *
      * @return  self
      */ 
-    public function setDescricpcion($Descricpcion)
+    public function setDescripcion($descripcion)
     {
-        $this->Descricpcion = $Descricpcion;
+        $this->descripcion = $descripcion;
 
         return $this;
     }
 
     /**
-     * Get the value of Edad
+     * Get the value of edad
      */ 
     public function getEdad()
     {
-        return $this->Edad;
+        return $this->edad;
     }
 
     /**
-     * Set the value of Edad
+     * Set the value of edad
      *
      * @return  self
      */ 
-    public function setEdad($Edad)
+    public function setEdad($edad)
     {
-        $this->Edad = $Edad;
+        $this->edad = $edad;
 
         return $this;
     }
 
     /**
-     * Get the value of Tipo
+     * Get the value of tipo
      */ 
     public function getTipo()
     {
-        return $this->Tipo;
+        return $this->tipo;
     }
 
     /**
-     * Set the value of Tipo
+     * Set the value of tipo
      *
      * @return  self
      */ 
-    public function setTipo($Tipo)
+    public function setTipo($tipo)
     {
-        $this->Tipo = $Tipo;
+        $this->tipo = $tipo;
 
         return $this;
     }
 
     /**
-     * Get the value of Raza
+     * Get the value of raza
      */ 
     public function getRaza()
     {
-        return $this->Raza;
+        return $this->raza;
     }
 
     /**
-     * Set the value of Raza
+     * Set the value of raza
      *
      * @return  self
      */ 
-    public function setRaza($Raza)
+    public function setRaza($raza)
     {
-        $this->Raza = $Raza;
+        $this->raza = $raza;
 
         return $this;
     }
 
     /**
-     * Get the value of Estado
+     * Get the value of URL_imagen
+     */ 
+    public function getURL_imagen()
+    {
+        return $this->URL_imagen;
+    }
+
+    /**
+     * Set the value of URL_imagen
+     *
+     * @return  self
+     */ 
+    public function setURL_imagen($URL_imagen)
+    {
+        $this->URL_imagen = $URL_imagen;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of estado
      */ 
     public function getEstado()
     {
-        return $this->Estado;
+        return $this->estado;
     }
 
     /**
-     * Set the value of Estado
+     * Set the value of estado
      *
      * @return  self
      */ 
-    public function setEstado($Estado)
+    public function setEstado($estado)
     {
-        $this->Estado = $Estado;
+        $this->estado = $estado;
 
         return $this;
     }
 
     /**
-     * Get the value of Activo
+     * Get the value of activo
      */ 
     public function getActivo()
     {
-        return $this->Activo;
+        return $this->activo;
     }
 
     /**
-     * Set the value of Activo
+     * Set the value of activo
      *
      * @return  self
      */ 
-    public function setActivo($Activo)
+    public function setActivo($activo)
     {
-        $this->Activo = $Activo;
+        $this->activo = $activo;
 
         return $this;
     }

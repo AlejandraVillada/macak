@@ -22,7 +22,7 @@ class fundaciones extends ModeloConexionDB
     public function lista()
     {
         $this->query = "
-			SELECT id, nit, nombre, descripcion, direccion, telefono,
+			SELECT id, nit, nombre, descripcion, direccion, telefono,URL_imagen,
             numero_cuenta, tipo_cuenta
 			FROM fundaciones
             ORDER BY id

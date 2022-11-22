@@ -6,12 +6,38 @@ function adopcion_apadrinamiento() {
         data: { accion: 'listar' },
         dataType: "json"
     }).done(function(aa) {
-        console.log(aa);
+        // console.log(aa);
         // $("#IdSede").append("<option value='" + value.IdSede + "'>" + value.NombreSede + "</option>");
         $.each(aa.data, function(index, value) {
-            $("#adopcion_apadrinamiento").append("<div class='card carta_fundaciones m-3 col-4' style='width: 18 rem; position: relative; left: 30 px;>'<img src='public/img/perritos1.jpg' class='card-img-top' alt='...' style='border-radius: 100 % ; width:200 px; height:150 px; position:relative; left:35 px; top: 15 px;'><div class='card-body'><h5 class='card-title'>" + value.nombre + "</h5><p class='card-text'>" + value.descripcion + "</p><a href='#' class ='btn bg-secondary-plantilla '>Ver mas</a></div></div>")
+            $("#adopcion_apadrinamiento").append("<div class='card carta_fundaciones m-3 col-4' style='width: 18 rem; position: relative; left: 30 px;'><img src='"+value.URL_imagen+"' class='card-img-top' alt='...' style='border-radius: 100 % ; width:200 px; height:150 px; position:relative; left:35 px; top: 15 px;'><div class='card-body'><h5 class='card-title'>" + value.nombre + "</h5><p class='card-text'>" + value.descripcion + "</p><button type='button' class='btn bg-secondary-plantilla vermas' data-bs-toggle='modal' data-bs-target='#detalle_mascota' data-codigo='"+value.id+"' >Ver Mas</button></div></div>")
         });
 
+    });
+
+    $(".adopcion").on("click", "button.vermas", function() {
+        var codigo = $(this).data("codigo");
+        $.ajax({
+            type: "get",
+            url: "src/controlador/controlador_adopcion_apadrinamiento.php",
+            // url: "../../../Controlador/controlador_empleados.php",
+            data: { codigo: codigo, accion: 'consultar' },
+            dataType: "json"
+        }).done(function(mascota) {
+            if (mascota.respuesta === "No Existe El Empleado") {
+                swal({
+                    type: 'error',
+                    title: '¡Error!',
+                    text: '¡El Empleado No Existe!'
+                })
+            } else {
+                console.log($("#nombre_mascota").text());
+                $("#nombre_mascota").text(mascota.nombre);
+                // $("#NombreEmpleado").val(empleado.nombre);
+                // $("#Email").val(empleado.email);
+                // $("#SueldoBase").val(empleado.sueldo);
+                // $("#Telefono").val(empleado.telefono);
+            }
+        });
     });
 
 
