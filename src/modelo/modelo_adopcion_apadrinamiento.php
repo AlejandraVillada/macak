@@ -36,6 +36,21 @@ class mascotas extends ModeloConexionDB
         return $resultado;
     }
 
+    
+
+    public function cambiar_estado($id = '')
+    {
+        if ($id != ''):
+            $this->query ="UPDATE pets SET estado='adoptado'
+	            WHERE id = '$id'";
+            $resultado = $this->ejecutar_query_simple();
+            return $resultado;
+        endif;
+       
+
+
+    }
+
     public function consultar($id = '')
     {
         if ($id != ''):
@@ -50,6 +65,7 @@ class mascotas extends ModeloConexionDB
                 $this->$propiedad = $valor;
             endforeach;
         endif;
+        
 
     }
 

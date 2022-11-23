@@ -37,12 +37,23 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a href="src/vistas/donaciones.php" type="button" class="btn btn-primary">Ir a donar</a>
+                        
+                        
                     </div>
-                    </div>
+                    <div class="formulario_solicitudes">
+                        <form id="datos">
+                            <input type="hidden" name="id_user" id="id_user" value="1">
+                            <input type="hidden" name="id_fundacion" id="id_fundacion">
+                            <input type="hidden" name="id_mascota" id="id_mascota">
+                            <input type="hidden" name="estado" id="estado" value="0">
+                            <input type="hidden" name="accion" id="accion" value="guardar_solicitud">
+                        </form>
+                    </div>       
                 </div>
-            </div>       
+            </div>
         </div>
+            
+    </div>
     </section>
 
     <script src="public/js/adopcion_apadrinamiento.js"></script>

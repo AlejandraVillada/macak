@@ -41,4 +41,13 @@ switch ($_GET['accion']) {
             echo json_encode($respuesta);
             break;
 
+            case 'cambiar_estado':
+                $mascota = new mascotas();
+                $resultado = $mascota->cambiar_estado($datos['codigo']);
+                $respuesta = array(
+                    'respuesta' => $resultado
+                );
+                echo json_encode($respuesta);
+                break;
+
 }
