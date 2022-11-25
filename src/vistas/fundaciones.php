@@ -25,8 +25,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a href="src/vistas/donaciones.php" type="button" class="btn btn-primary">Ir a donar</a>
-                        <a href="src/vistas/adopcion_apadrinamiento.php" type="button" class="btn btn-primary">Ir a adoptar</a>
+                        <button type="button" class="btn btn-primary donar" data-bs-dismiss="modal">Ir a donar</button>
+                        <button type="button" class="btn btn-primary adoptar" data-bs-dismiss="modal">Ir a adoptar</button>
                     </div>
                     </div>
                 </div>

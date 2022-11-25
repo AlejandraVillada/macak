@@ -39,6 +39,30 @@ function fundaciones() {
             $("#nombre_fundacion").empty();
             $("#contenido_modal").empty();
         });
+
+        $(".fundaciones").on("click", "button.donar", function(e) {
+            e.preventDefault();
+            var aID = 'src/vistas/donaciones.php';
+            $.get(aID, function(data) {
+                if (aID != "#") {
+                    $("#contenido").html(data);
+                    $(".irdonar").addClass("active");
+                    $(".irfundaciones").removeClass("active");
+                }
+            });
+        });
+        $(".fundaciones").on("click", "button.adoptar", function(e) {
+            e.preventDefault();
+            var aID = 'src/vistas/adopcion_apadrinamiento.php';
+            $.get(aID, function(data) {
+                if (aID != "#") {
+                    $("#contenido").html(data);
+                    $(".iradopcion").addClass("active");
+                    $(".irfundaciones").removeClass("active");
+                }
+            });
+        });
+    
         
     });
 

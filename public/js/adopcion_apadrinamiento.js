@@ -52,7 +52,7 @@ function adopcion_apadrinamiento() {
                     }
                 });
 
-                $(".modal-footer").append("<a href='index.php' type='button' class='btn btn-primary'>Ir a donar</a><button type='button' data-codigo='"+mascota.codigo+"' class='btn btn-primary validar_adoptar'>Enviar a validacion para adoptar</button>");
+                $(".modal-footer").append("<button type='button' class='btn btn-primary donar' data-bs-dismiss='modal'>Ir a donar</button><button type='button' data-codigo='"+mascota.codigo+"' class='btn btn-primary validar_adoptar'>Enviar a validacion para adoptar</button>");
                 $("#id_fundacion").val(mascota.id_fundacion);
                 $("#id_mascota").val(mascota.codigo);
             }
@@ -108,7 +108,17 @@ function adopcion_apadrinamiento() {
 
     });
 
-   
+    $(".adopcion").on("click", "button.donar", function(e) {
+        e.preventDefault();
+        var aID = 'src/vistas/donaciones.php';
+        $.get(aID, function(data) {
+            if (aID != "#") {
+                $("#contenido").html(data);
+                $(".irdonar").addClass("active");
+                $(".iradopcion").removeClass("active");
+            }
+        });
+    });
 
     
    

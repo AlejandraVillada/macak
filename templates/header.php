@@ -30,14 +30,14 @@
                         <a class="item nav-link listar activar_boton" aria-current="page" href="src/vistas/home.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="item nav-link listar activar_boton" href="src/vistas/fundaciones.php">Fundaciones Asociadas</a>
+                        <a class="item nav-link listar activar_boton irfundaciones" href="src/vistas/fundaciones.php">Fundaciones Asociadas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="item nav-link listar activar_boton" href="src/vistas/adopcion_apadrinamiento.php">Adopción y
+                        <a class="item nav-link listar activar_boton iradopcion" href="src/vistas/adopcion_apadrinamiento.php">Adopción y
                             Apadrinamiento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="item nav-link listar activar_boton" href="src/vistas/donaciones.php">Donaciones</a>
+                        <a class="item nav-link listar activar_boton irdonar" href="src/vistas/donaciones.php">Donaciones</a>
                     </li>
                     <li class="nav-item " style=" color:black;" id="iniciar_sesion">
                         <b><a class="item nav-link btn p-1 m-1 bg-primary-plantilla listar activar_boton" href="src/vistas/login.php">Iniciar Sesión</a></b>
