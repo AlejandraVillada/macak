@@ -27,19 +27,19 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="public/js/index.js"></script>
 <script>
-    // $('#sesion_iniciada').fadeOut();
-
-    // $('nav li a.listar').on('click', function(e) {
-    //     e.preventDefault();
-    // console.log($(this).attr('href'));
-    //     var aID = $(this).attr('href');     
-
-    //     $.post(aID, function(data) {
-    //         if (aID != "#") {
-    //             $("#contenido").html(data);
-    //         }
-    //     });
-    // }); 
+   $.ajax({
+        type: "get",
+        url: "src/controlador/controlador_adopcion_apadrinamiento.php",
+        data: { accion: 'listar_home' },
+        dataType: "json"
+    }).done(function(aa) {
+        console.log(aa);
+            $.each(aa.data, function(index, value) {
+                if(value.estado == 'publicado'){
+                    $("#mascotas").append("<div class='col-lg-12 col-sm-10 col-md-10 d-flex justify-content-center'><div class='col-lg-3 col-sm-10 col-md-10 m-2'><div class='row'><img src='"+value.URL_imagen+"' style='width: 200px;' alt='' srcset=''></div><div class='row'><h4>"+value.nombre+"</h4></div><div class='row'>"+value.descripcion+"</div></div></div>")
+                }
+            });
+    });
 </script>
 </body>
 

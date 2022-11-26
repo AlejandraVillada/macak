@@ -36,6 +36,21 @@ class mascotas extends ModeloConexionDB
         return $resultado;
     }
 
+    public function lista_home()
+    {
+        $this->query ="
+			SELECT pets.id, pets.id_fundacion,fundaciones.nombre, pets.nombre, pets.descripcion, pets.edad, pets.tipo,
+            pets.raza,pets.URL_imagen, pets.estado, pets.activo
+			FROM pets
+            Inner join fundaciones on(pets.id_fundacion=fundaciones.id)
+            ORDER BY pets.id DESC
+			limit 3";
+
+        $this->obtener_resultados_query();
+        $resultado=$this->rows;
+        return $resultado;
+    } 
+
     
 
     public function cambiar_estado($id = '')
