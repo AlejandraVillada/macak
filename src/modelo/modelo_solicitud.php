@@ -19,10 +19,8 @@ class solicitudes extends ModeloConexionDB
     public function lista()
     {
         $this->query = "
-			SELECT pets.id, pets.id_fundacion,fundaciones.nombre, pets.nombre, pets.descripcion, pets.edad, pets.tipo,
-            pets.raza,pets.URL_imagen, pets.estado, pets.activo
-			FROM pets
-            Inner join fundaciones on(pets.id_fundacion=fundaciones.id)
+			SELECT id,id_user,id_fundacion,id_mascoya,estado
+			FROM transacciones
             ORDER BY pets.nombre ASC
 			";
 
