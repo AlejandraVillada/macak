@@ -3,10 +3,14 @@
         color: white;
         font-family: 'Permanent Marker', cursive;
     }
-</style>
-<style>
+
     h5 {
         color: white;
+        font-family: 'Fredoka One', cursive;
+    }
+
+    h4 {
+        color: #735041;
         font-family: 'Fredoka One', cursive;
     }
 </style>
@@ -49,13 +53,36 @@
     </div>
 </div>
 <div class = "fl-row-content-wrap mt-4"><img src="public/img/Donacion.png" ></div>
-<div class = "fl-row-content-wrap mt-4"><img src="public/img/Donaciones.png" ></div>
+<section>
 
-
-
-
-
-
+    <div class="row justify-content-around">
+        <div class="col-3 m-3">
+           <h4>En especie</h4>
+        </div>
+        <div class="col-3 m-3">
+            <h4>En Dinero</h4>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-3 m-1 text-center container">
+            <p>
+                <span style="font-size: 16px;">
+                    Alimento concentrado para perros y gatos (adultos y cachorros), 
+                    medicinas, elementos de aseo, arena para gatos, juguetes, camas, casas, entre otros.
+                </span>
+            </p>   
+        </div>
+        <div class="col-3 m-1 text-center container">
+            <p>
+                <span style="font-size: 16px;">
+                    Puede ser por el valor que desees, por medio de una consignación a la fundación que
+                    eligas.
+                </span>
+            </p>   
+        </div>
+    </div>
+</section>
+<div class = "fl-row-content-wrap mt-5"><img src="public/img/Donaciones.png" ></div>
 
 
 

@@ -204,7 +204,7 @@ $_SESSION['title'] = 'MACAK| Home ';
 </section> -->
 <div class="row d-flex text-center justify-content-center">
 
-    <h3>Mascotas</h3>
+    <h4>Mascotas</h4>
 </div>
 
 
