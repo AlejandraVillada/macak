@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="row justify-content-around">
-        <div class="col-3 m-1 text-center container">
+        <div class="col-3 text-center container">
             <p>
                 <span style="font-size: 16px;">
                     Alimento concentrado para perros y gatos (adultos y cachorros), 
@@ -72,7 +72,7 @@
                 </span>
             </p>   
         </div>
-        <div class="col-3 m-1 text-center container">
+        <div class="col-3 text-center container">
             <p>
                 <span style="font-size: 16px;">
                     Puede ser por el valor que desees, por medio de una consignación a la fundación que

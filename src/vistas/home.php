@@ -202,11 +202,8 @@ $_SESSION['title'] = 'MACAK| Home ';
         </div>
     </div>
 </section> -->
-<div class="row d-flex text-center justify-content-center">
 
-    <h4>Mascotas</h4>
-</div>
-
+<div class = "fl-row-content-wrap mt-3"><img src="public/img/Mascotas.png" ></div>
 
 <div class="container">
     <div id="mascotas" class="row  text-center">
