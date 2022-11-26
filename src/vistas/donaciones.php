@@ -35,7 +35,9 @@
     </div>
 </div>
 
-<div class = "fl-row-content-wrap mt-4"><img src="public/img/perros.png" ></div>
+<div class = "d-flex justify-content-center mt-4">
+    <img src="public/img/perros.png" >
+</div>
 
 <div class="text-center container-lg mt-4">
 	<p>
