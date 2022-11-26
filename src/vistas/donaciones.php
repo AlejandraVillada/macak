@@ -69,7 +69,9 @@
                 <span style="font-size: 16px;">
                     Alimento concentrado para perros y gatos (adultos y cachorros), 
                     medicinas, elementos de aseo, arena para gatos, juguetes, camas, casas, entre otros.
-                            (Proximanente, esperalo!!!)
+                </span>
+                <span style="font-size: 16px;">
+                    (Proximanente, esperalo!!!)
                 </span>
             </p>   
         </div>
