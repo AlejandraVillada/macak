@@ -32,10 +32,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group  col">
-                <label for="edad">Imagen</label>
-                <input type="file" id="edad_act" class="form-control" id=""  name="url_img[]">
-            </div>
+           
             <div class="form-group  col">
                 <label for="edad">Estado Inicial</label>
                 <select name="estado" id="estado_act" class="form-control" required>
@@ -57,7 +54,7 @@
 
 
         <div class="form-group mt-1 justify-content-end d-flex">
-            <button type="submit" id="actualizar_Animales" class="btn btn-primary mr-1" data-toggle="tooltip">Actualizar
+            <button type="submit" id="actualizar_animales" class="btn btn-primary mr-1" data-toggle="tooltip">Actualizar
                 Animales</button>
             <button id="cerrar" type="button" class="btn btn-danger ml-1" data-dismiss="modal" data-toggle="tooltip">Regresar</button>
             <!-- <a href="../Animales/view_Animales.php" id="cerrar" class="btn btn-danger"
@@ -65,6 +62,7 @@
         </div>
 
         <input type="hidden" id="modificar" value="modificar" name="action" />
+        <input type="hidden" id="id_act" name="id" />
 
     </form>
     <!-- </div> -->

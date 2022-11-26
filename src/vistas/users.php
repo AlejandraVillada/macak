@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <style>
     .carta_general {
         background-repeat: no-repeat;
@@ -38,39 +38,53 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Nombre Completo</label>
-                        <input type="text" required class="form-control m-2" name="name" readonly value="<?= $_SESSION['name']?>">
+                        <input type="text" required class="form-control m-2" name="name" readonly value="<?= $_SESSION['name'] ?>">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Dirección</label>
-                        <input type="text" required class="form-control m-2" name="direccion" value="<?=$_SESSION['direccion'] ?>">
+                        <input type="text" required class="form-control m-2" name="direccion" value="<?= $_SESSION['direccion'] ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Usuario</label>
-                        <input type="text" required class="form-control m-2" name="username" readonly value="<?=$_SESSION['username'] ?>">
+                        <input type="text" required class="form-control m-2" name="username" readonly value="<?= $_SESSION['username'] ?>">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Contraseña</label>
-                        <input type="password" required class="form-control m-2" name="password" value="<?=$_SESSION['pass'] ?>">
+                        <input type="password" required class="form-control m-2" name="password" value="<?= $_SESSION['pass'] ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">email</label>
-                        <input type="text" required class="form-control m-2" name="email" readonly value="<?=$_SESSION['email'] ?>">
-                        <input type="hidden" required class="form-control m-2" name="id_usuario" readonly value="<?=$_SESSION['id_usuario'] ?>">
+                        <input type="text" required class="form-control m-2" name="email" readonly value="<?= $_SESSION['email'] ?>">
+                        <input type="hidden" required class="form-control m-2" name="id_usuario" readonly value="<?= $_SESSION['id_usuario'] ?>">
                     </div>
-                   
+
                 </div>
                 <div class="row justify-content-center mt-3">
                     <input type="hidden" name="action" value="act_user">
                     <input type="submit" value="Actualizar Datos" class="btn  bg-secondary-plantilla text-white text-bold">
 
                 </div>
-                
+
             </form>
         </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class=" row titulo text-center mt-5 d-flex justify-content-center">
+        <div class=" bg-primary-plantilla " style="border-radius: 70px 10px; background-color:#273751 ;width: 500px; height:50px; text-align:center; vertical-align:middle;">
+            <b>
+                <h5 class="text-white mt-2">Solicitudes de Adopción Realizadas</h5>
+            </b>
+        </div>
+    </div>
+    <hr>
+    <div id="solicitudes" class="row">
+
     </div>
 </div>
 

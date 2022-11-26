@@ -43,6 +43,23 @@
 		    }
 			
 		}
+
+		protected function ejecutar_query_simple_register() {			
+			try {
+				$this->abrir_conexion();
+		        $this->conexion->query($this->query)
+				or die(mysqli_errno($this->conexion)." : " 
+				.mysqli_error($this->conexion)."  | Query=".$this->query);
+				$resultado = $this->conexion->insert_id;
+				// var_dump($this->conexion);
+				$this->cerrar_conexion();
+				return $resultado;
+		    } catch(Exception $e) {
+		        echo "Error! : " . $e->getMessage();
+		        return false;
+		    }
+			
+		}
 		
 		# Traer resultados de una consulta en un Array con utf8
 		protected function obtener_resultados_query() {

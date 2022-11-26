@@ -26,7 +26,7 @@
             <!-- <img class="mt-5" src="public/img/logo.png" alt="" width="400"> -->
         </div>
         <div class="row m-1 justify-content-center d-flex" style="color: black !important;">
-            <form id="form_registrar" method="POST" enctype="multipart/form-data">
+            <form id="form_registrar" method="POST" enctype="multipart/form-data" >
                 <div class="row text-center">
                     <h2>MACAK</h2>
                     <br>
@@ -35,7 +35,7 @@
                 <hr>
                 <div class="row">
                     <div class="col">
-                        <input required type="radio" name="usertype" id="registrar_fundacion" value="">
+                        <input required type="radio" name="usertype" id="registrar_fundacion" value="3">
                         <label for="">Fundaciones </label>
                     </div>
                     <div class="col" required>
@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <label for="" class="lblinfo_fun"> Descripción</label>
-                        <textarea name="desscripcion" id="descripcion" class="form-control fundacion" cols="30" rows="10"></textarea>
+                        <textarea name="descripcion" id="descripcion" class="form-control fundacion" cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-3">

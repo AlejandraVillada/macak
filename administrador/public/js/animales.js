@@ -57,8 +57,8 @@ function consultar() {
                     return '<textarea class="form-control" > ' + data + '</textarea>'
                 }
             },
-            { "data": "tipo" },
             { "data": "edad" },
+            { "data": "tipo" },
             { "data": "raza" },
             { "data": "URL_imagen" },
             { "data": "estado" },
@@ -79,13 +79,13 @@ function consultar() {
             data: { codigo: codigo, action: 'consultar_animales' },
             dataType: "json"
         }).done(function(respuesta) {
-            $("#id_act").val(respuesta.id);
-            $("#name_act").val(respuesta.nombre);
-            $("#descripcion_act").val(respuesta.descripcion);
-            $("#tipo_act").val(respuesta.tipo);
-            $("#edad_act").val(respuesta.edad);
-            $("#raza_act").val(respuesta.raza);
-            $("#estado_act").val(respuesta.estado);
+            $("#id_act").val(respuesta.resultado.id);
+            $("#name_act").val(respuesta.resultado.nombre);
+            $("#descripcion_act").val(respuesta.resultado.descripcion);
+            $("#tipo_act").val(respuesta.resultado.tipo);
+            $("#edad_act").val(respuesta.resultado.edad);
+            $("#raza_act").val(respuesta.resultado.raza);
+            $("#estado_act").val(respuesta.resultado.activo);
 
 
         });
@@ -96,8 +96,8 @@ function consultar() {
 
     $("#editado3").on('click', 'button#actualizar_animales', function(e) {
         e.preventDefault();
-
-        var datos = $("#formActualizarAnimales").serialize();
+        var datos = $('#formActualizarAnimales').serialize()
+        console.log(datos)
         $.ajax({
             type: "post",
             url: "Controlador/controlador_animales.php",
@@ -109,7 +109,7 @@ function consultar() {
                 swal({
                     position: 'center',
                     type: 'success',
-                    title: 'El animales fue actualizado con éxito',
+                    title: 'La mascota fue actualizada con éxito',
                     showConfirmButton: false,
                     timer: 1200
                 })

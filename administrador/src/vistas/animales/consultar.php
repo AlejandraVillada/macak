@@ -1,4 +1,11 @@
-<style></style>
+<style>
+    
+.cafe_claro {
+    background-color: rgb(115, 80, 65);
+    color: aliceblue;
+}
+
+</style>
 <div class="card card-light text-black m-5" style="position: relative; ">
     <div class="card-header bg-dark justify-content-center d-flex row mt-0">
         <div class="col">
@@ -43,8 +50,9 @@
     <div class="modal fade " id="modal_act_animales" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="modal_act_animalesLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content bg-dark">
-                <div class="modal-header">
+            <div class="modal-content text-dark ">
+                <div class="modal-header cafe_claro">
+                    
                     <h5 class="modal-title" id="modal_act_animalesLabel">Actualizar animales</h5>
                     <button type="button" class="btn btn-secodary" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i> </button>
                 </div>

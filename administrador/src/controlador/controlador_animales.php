@@ -24,7 +24,7 @@ switch ($accion) {
 // var_dump(json_encode($resultado));
         echo json_encode($resultado);
         break;
-        case 'modificar':
+     case 'modificar':
             $datos=$_POST;
             $resultado= $animales->editar($datos);
     // var_dump(json_encode($resultado));
@@ -35,7 +35,7 @@ switch ($accion) {
         $id=$_SESSION['id_fundacion'];
         $resultado=$animales->consultar_ind($id,$_POST['codigo']);
         // var_dump($resultado);
-        echo utf8_decode(json_encode($resultado[0]));
+        echo utf8_decode(json_encode(array('resultado'=>$resultado[0]),JSON_UNESCAPED_UNICODE));
         break;
     default:
         # code...

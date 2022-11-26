@@ -33,6 +33,11 @@ button.btn-secondary {
     /* display: flex; */
 }
 
+.cafe_claro {
+    background-color: rgb(115, 80, 65);
+    color: aliceblue;
+}
+
 #barra_lateral {
     max-width: 250px;
     min-height: 200vh;

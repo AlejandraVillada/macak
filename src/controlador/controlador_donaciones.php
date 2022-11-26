@@ -23,4 +23,6 @@ switch ($_GET['accion']) {
         }
         echo json_encode($respuesta);
         break;
+
+        
 }

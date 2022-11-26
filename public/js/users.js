@@ -22,12 +22,14 @@ function register() {
     $('#form_registrar').submit(function(e) {
         e.preventDefault();
 
-        var data = $(this).serialize();
+        var data = new FormData(this);
         // console.log(data);
         $.ajax({
             type: "post",
             url: "src/controlador/controlador_register.php",
             data: data,
+            contentType: false,
+            processData: false,
             dataType: "json"
         }).done(function(resultado) {
 
@@ -157,5 +159,25 @@ function users() {
         });
 
     })
+
+
+    $.ajax({
+        type: "get",
+        url: "src/controlador/controlador_adopcion_apadrinamiento.php",
+        data: { accion: 'listar_solicitudes' },
+        dataType: "json"
+    }).done(function(fundacion) {
+        console.log(fundacion);
+        // $("#IdSede").append("<option value='" + value.IdSede + "'>" + value.NombreSede + "</option>");
+        $.each(fundacion.data, function(index, value) {
+            // console.log(fundacion)
+            $("#solicitudes").append(
+                '<div class="profile-card-4 text-center col-lg-6 p-0"><b>Nombre Mascota:</b> ' + value.nombre_mascota + '<b> Nombre Fundación </b>' + value.nombre_fundacion + '</div>'
+            );
+            // $("#fundacion").append("<div class='card carta_fundaciones m-3 col-4' style='width: 18 rem; position: relative; left: 30 px;'><img src='" + value.URL_imagen + "' class='card-img-top' alt='...' style='border-radius: 100 % ; width:200 px; height:150 px; position:relative; left:35 px; top: 15 px;'><div class='card-body'><h5 class='card-title'>" + value.nombre + "</h5><button type='button' class='btn bg-secondary-plantilla vermas' data-bs-toggle='modal' data-bs-target='#detalle_fundacion' data-codigo='" + value.id + "' >Ver Mas</button></div></div>")
+        });
+
+    });
+
 
 }

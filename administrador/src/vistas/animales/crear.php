@@ -1,6 +1,6 @@
 <div class="card-body m-0 p-0">
     <!-- <div class="card-body"> -->
-    <form id="formCrearAnimales">
+    <form id="formCrearAnimales" enctype="multipart/form-data" >
 
         <div class="row">
             <div class="form-group col">

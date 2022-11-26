@@ -36,12 +36,14 @@ $('#barra_collapse').on('click', function() {
 $('#formCrearAnimales').submit(function(e) {
     console.log('Animales');
     e.preventDefault();
-    var datos = $(this).serialize();
+    var datos = new FormData(this);
     $.ajax({
         type: "post",
         url: "Controlador/controlador_Animales.php",
         // url: "../../../Controlador/controlador_clientes.php",
         data: datos,
+        contentType: false,
+        processData: false,
         dataType: "json"
     }).done(function(resultado) {
         // console.log(resultado==);

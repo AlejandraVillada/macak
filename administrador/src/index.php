@@ -19,11 +19,12 @@ if (!isset($_SESSION)) {
             <li><a href="vistas/principal.php" class="listar"> <span><i class="fas fa-home"></i></span> Inicio</a></li>
             <li><a href="vistas/animales/consultar.php" class="listar"> <span><i class="fas fa-paw"></i></span>
                     Animales</a></li>
-            <li><a href="vistas/donaciones/reporte_1.php" class="listar"> <span><i class="fas fa-hand-holding-usd"></i></span>
-                    Donaciones</a></li>
+            <!-- <li><a href="vistas/donaciones/reporte_1.php" class="listar"> <span><i class="fas fa-hand-holding-usd"></i></span>
+                    Donaciones</a></li> -->
 
             <hr style="background-color: #FBB204;">
-            <li><a href="../login.php?cerrar_sesion=true"> <span><i class="fas fa-sign-out-alt"></i></span> Cerrar
+            <li><a href="../../index.php"> <span><i class="fas fa-sign-out-alt"></i></span> Volver al Home</a></li>
+            <li><a href="../../index.php?cerrar_sesion=true"> <span><i class="fas fa-sign-out-alt"></i></span> Cerrar
                     Sesión</a></li>
         </ul>
 
@@ -44,7 +45,7 @@ if (!isset($_SESSION)) {
                 </div>
                 <div class="col-8"> <span>
                         <!-- <img src="../public/img/<?= $_SESSION['URL_imagen'] ?>" class="d-inline-block align-top ml-5" width="200"> -->
-<h3>MACAK | Admin</h3>
+<h3>MACAK | Admin Fundación <?= $_SESSION['name'] ?></h3>
                     </span>
                 </div>
                 <div class="col-1 " id="us_contenido">
@@ -69,7 +70,7 @@ if (!isset($_SESSION)) {
 
                 </div>
                 <div class="col-1"> <button type="button" id="barra_collapse" class="btn btn-secondary " style="float: inline-end !important;">
-                        <a href="../login.php?cerrar_sesion=true"><span><i class="fas fa-sign-out-alt"></i></span></a>
+                        <a href="../../index.php?cerrar_sesion=true"><span><i class="fas fa-sign-out-alt"></i></span></a>
                     </button>
                 </div>
             </div>
@@ -91,7 +92,7 @@ if (!isset($_SESSION)) {
     <div class="modal fade " id="modal_animales" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modal_animalesLabel" aria-hidden="true">
         <div class="modal-dialog  modal-lg modal-dialog-scrollable">
             <div class="modal-content bg-light text-dark ">
-                <div class="modal-header  bg-dark text-white ">
+                <div class="modal-header  cafe_claro ">
                     <h5 class="modal-title" id="modal_animalesLabel">Crear animales</h5>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
                 </div>
