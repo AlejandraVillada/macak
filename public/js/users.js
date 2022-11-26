@@ -1,5 +1,24 @@
 function register() {
 
+    $('.fundacion').fadeOut();
+
+    $('#registrar_fundacion').on('click', function(e) {
+        $('.fundacion').fadeIn();
+        $('.lblinfo_fun').fadeIn();
+        $('.fundacion').removeAttr('required');
+
+        $('.fundacion').attr('required', 'true');
+
+    })
+    $('#registrar_cliente').on('click', function(e) {
+        $('.fundacion').fadeOut();
+        $('.lblinfo_fun').fadeOut();
+
+        $('.fundacion').removeAttr('required');
+        // $('.fundacion').attr('required', 'false');
+
+    })
+
     $('#form_registrar').submit(function(e) {
         e.preventDefault();
 
@@ -85,7 +104,9 @@ function login() {
 
 
                 if (resultado.user_type == '3') {
-                    console.log(resultado)
+                    // console.log(resultado)
+                    $('#iniciar_administrador_fundaciones').fadeOut();
+
                     $('#iniciar_administrador_fundaciones').fadeIn();
                 }
             } else {
@@ -101,5 +122,40 @@ function login() {
 
     })
 
+
+}
+
+function users() {
+    $('#form_actualizar').submit(function(e) {
+        e.preventDefault();
+
+        var data = $(this).serialize();
+
+        $.ajax({
+            type: "post",
+            url: "src/controlador/controlador_register.php",
+            data: data,
+            dataType: "json"
+        }).done(function(resultado) {
+
+            if (resultado.data == -1) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'El usuario no fue actualizado correctamente',
+                })
+            } else {
+                Swal.fire(
+                        'Actualizado!',
+                        'El usuario fue actualizado correctamente',
+                        'success'
+                    )
+                    // alert('');
+            }
+            // console.log(resultado);
+
+        });
+
+    })
 
 }

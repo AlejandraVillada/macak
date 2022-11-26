@@ -25,6 +25,7 @@ switch ($accion) {
             $_SESSION['email'] = $resultado['email'];
             $_SESSION['direccion'] = $resultado['direccion'];
             $_SESSION['id_fundacion'] = $resultado['id_fundacion'];
+            $_SESSION['id_usuario'] = $resultado['id'];
             $_SESSION['pass'] = $pass;
             // var_dump($_SESSION);
             $respuesta = array(

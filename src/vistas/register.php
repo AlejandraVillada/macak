@@ -26,7 +26,7 @@
             <!-- <img class="mt-5" src="public/img/logo.png" alt="" width="400"> -->
         </div>
         <div class="row m-1 justify-content-center d-flex" style="color: black !important;">
-            <form id="form_registrar" method="POST">
+            <form id="form_registrar" method="POST" enctype="multipart/form-data">
                 <div class="row text-center">
                     <h2>MACAK</h2>
                     <br>
@@ -35,11 +35,11 @@
                 <hr>
                 <div class="row">
                     <div class="col">
-                        <input required type="radio" name="usertype" id="" value="">
+                        <input required type="radio" name="usertype" id="registrar_fundacion" value="">
                         <label for="">Fundaciones </label>
                     </div>
                     <div class="col" required>
-                        <input type="radio" name="usertype" id="">
+                        <input type="radio" name="usertype" id="registrar_cliente">
                         <label for="">Invitados </label>
                     </div>
                 </div>
@@ -65,11 +65,27 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 ">
                         <label for="">email</label>
                         <input type="text" required class="form-control m-2" name="email">
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 ">
+                        <label for="" class="lblinfo_fun">nit</label>
+                        <input type="text" required class="form-control m-2 fundacion" name="nit">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <label for="" class="lblinfo_fun"> Logo</label>
+                        <input type="file" required class="form-control m-2 fundacion" name="logo[]">
+                    </div>
 
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label for="" class="lblinfo_fun"> Descripción</label>
+                        <textarea name="desscripcion" id="descripcion" class="form-control fundacion" cols="30" rows="10"></textarea>
+                    </div>
                 </div>
                 <div class="row justify-content-center mt-3">
                     <input type="hidden" name="action" value="new_user">

@@ -17,6 +17,13 @@ switch ($accion) {
         $respuesta = $Usuarios->nuevo($data);
         echo json_encode(array('data' => $respuesta), JSON_UNESCAPED_UNICODE);
         break;
+    case 'act_user':
+        $Usuarios = new users();
+
+        $data = $_POST;
+        $respuesta = $Usuarios->editar($data);
+        echo json_encode(array('data' => $respuesta), JSON_UNESCAPED_UNICODE);
+        break;
 }
 
 function recibe_variables($nombre)

@@ -27,7 +27,7 @@
             <!-- <img class="mt-5" src="public/img/logo.png" alt="" width="400"> -->
         </div>
         <div class="row m-1 justify-content-center d-flex" style="color: black !important;">
-            <form id="form_registrar" method="POST">
+            <form id="form_actualizar" method="POST">
                 <div class="row text-center">
                     <h2>MACAK</h2>
                     <br>
@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Usuario</label>
-                        <input type="text" required class="form-control m-2" name="user" readonly value="<?=$_SESSION['username'] ?>">
+                        <input type="text" required class="form-control m-2" name="username" readonly value="<?=$_SESSION['username'] ?>">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">Contraseña</label>
@@ -59,11 +59,12 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <label for="">email</label>
                         <input type="text" required class="form-control m-2" name="email" readonly value="<?=$_SESSION['email'] ?>">
+                        <input type="hidden" required class="form-control m-2" name="id_usuario" readonly value="<?=$_SESSION['id_usuario'] ?>">
                     </div>
                    
                 </div>
                 <div class="row justify-content-center mt-3">
-                    <input type="hidden" name="action" value="new_user">
+                    <input type="hidden" name="action" value="act_user">
                     <input type="submit" value="Actualizar Datos" class="btn  bg-secondary-plantilla text-white text-bold">
 
                 </div>
@@ -75,5 +76,5 @@
 
 <script src="public/js/users.js"></script>
 <script>
-    $(document).ready(register);
+    $(document).ready(users);
 </script>

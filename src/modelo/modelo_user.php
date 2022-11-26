@@ -19,6 +19,13 @@ class users extends ModeloConexionDB
         $resultado = $this->rows;
         // var_dump($resultado);
         if (empty($resultado)) {
+
+            if ($datos['usertype'] == 3) {
+
+                'INSERT INTO `fundaciones`(`id`, `nit`, `nombre`, `descripcion`, `direccion`, `telefono`, `numero_cuenta`, `URL_imagen`, `tipo_cuenta`) 
+                VALUES (null,'.trim($datos['nit']).','.trim($datos['name']).','.trim($datos['descripcion']).','.trim($datos['direccion']).',null,null,'.$url_img.',null)'
+            }
+
             $this->query = "INSERT INTO `users` 
             (`name`,`username`, `password`, `email`, `direccion`, `user_type`, `state`) 
              VALUES 
@@ -50,8 +57,37 @@ class users extends ModeloConexionDB
     public function consultar($datos = array())
     {
     }
-    public function editar()
+    public function editar($datos = array())
     {
+
+        session_start();
+        date_default_timezone_set('America/Bogota');
+
+        $password = $this->generarpass(trim($datos['password']));
+
+        $this->query = "UPDATE `users` SET 
+             `password`='$password', `direccion`='" . trim($datos['direccion']) . "' where id= '" . trim($datos['id_usuario']) . "'";
+
+
+        $resultado = $this->ejecutar_query_simple();
+
+        if ($resultado != false && $resultado == 1) {
+
+            $result = $this->login($datos['username']);
+            // session_start();
+            $_SESSION['username'] = $datos['username'];
+            $_SESSION['user_type'] = $result['user_type'];
+            $_SESSION['name'] = $result['name'];
+            $_SESSION['email'] = $result['email'];
+            $_SESSION['direccion'] = $result['direccion'];
+            $_SESSION['id_fundacion'] = $result['id_fundacion'];
+            $_SESSION['id_usuario'] = $result['id'];
+            $_SESSION['pass'] = $datos['password'];
+
+            return array('result' => $resultado, 'error' => '0');
+        } else {
+            return array('result' => $resultado, 'error' => '1');
+        }
     }
 
 

@@ -57,8 +57,8 @@
                                 <b><a class="item nav-link btn p-1 m-1 bg-primary-plantilla  " href="administrador"> <span>Admin</span></a></b>
                             </li>
                         <?php
-                        }else{
-                            ?>
+                        } else {
+                        ?>
                             <li class="nav-item " style=" color:black; display:none;" id="iniciar_administrador_fundaciones">
                                 <b><a class="item nav-link btn p-1 m-1 bg-primary-plantilla  " href="administrador"> <span>Admin</span></a></b>
                             </li>
@@ -79,6 +79,9 @@
                         </li>
                         <li class="nav-item " style=" color:black; " id="registrarse">
                             <b><a class="item nav-link btn p-1 m-1 bg-primary-plantilla listar activar_boton" href="src/vistas/register.php">Registrarse</a></b>
+                        </li>
+                        <li class="nav-item " style=" color:black; display:none;" id="iniciar_administrador_fundaciones">
+                            <b><a class="item nav-link btn p-1 m-1 bg-primary-plantilla  " href="administrador"> <span>Admin</span></a></b>
                         </li>
                         <li class="nav-item " style=" color:black; display:none;" id="sesion_iniciada">
                             <b><a class="item nav-link btn p-1 m-1 bg-primary-plantilla listar activar_boton" href="src/vistas/users.php"> <span><i class="fa-solid fa-user"></i></span></a></b>
