@@ -5,6 +5,11 @@
         font-family: 'Fredoka One', cursive;
     }
 
+    .cafe_claro {
+    background-color: rgb(115, 80, 65);
+    color: aliceblue;
+}
+
     .barra_navegacion {
 
         background-color: rgba(var(--bs-back-primary)) !important;
@@ -118,7 +123,7 @@
     <div class="modal fade" id="detalle_mascota" tabindex="-1" aria-labelledby="detalle_mascota" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header cafe_claro">
                     <h5 class="modal-title" id="nombre_mascota"></h5>
                     <button type="button" class="btn-close cerrar_pet" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -133,7 +138,7 @@
                 </div>
                 <div class="formulario_solicitudes">
                     <form id="datos">
-                        <input type="hidden" name="id_user" id="id_user" value="1">
+                        <input type="hidden" name="id_user" id="id_user" value="<?php session_start(); echo $_SESSION['id_usuario']?>">
                         <input type="hidden" name="id_fundacion" id="id_fundacion">
                         <input type="hidden" name="id_mascota" id="id_mascota">
                         <input type="hidden" name="estado" id="estado" value="0">

@@ -76,7 +76,7 @@ function adopcion_apadrinamiento() {
                     }
                 });
 
-                $(".modal-footer").append("<button type='button' class='btn btn-primary donar' data-bs-dismiss='modal'>Ir a donar</button><button type='button' data-codigo='" + mascota.codigo + "' class='btn btn-primary validar_adoptar'>Enviar a validacion para adoptar</button>");
+                $(".modal-footer").append("<button type='button' class='btn btn-primary donar cafe_claro' data-bs-dismiss='modal'>Ir a donar</button><button type='button' data-codigo='" + mascota.codigo + "' class='btn btn-primary validar_adoptar cafe_claro'>Enviar a validacion para adoptar</button>");
                 $("#id_fundacion").val(mascota.id_fundacion);
                 $("#id_mascota").val(mascota.codigo);
             }

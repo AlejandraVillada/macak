@@ -85,6 +85,12 @@
         transform: rotate(5deg) scale(1.1, 1.1);
         filter: brightness(110%);
     }
+    
+.cafe_claro {
+    background-color: rgb(115, 80, 65);
+    color: aliceblue;
+}
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <!-- Cartas de fundaciones -->
@@ -130,7 +136,7 @@
     <div class="modal fade " id="detalle_fundacion" tabindex="-1" aria-labelledby="detalle_fundacion" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header cafe_claro">
                     <h5 class="modal-title" id="nombre_fundacion"></h5>
                     <button type="button" class="btn-close cerrar_fundacion" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -140,8 +146,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary donar" data-bs-dismiss="modal">Ir a donar</button>
-                    <button type="button" class="btn btn-primary adoptar" data-bs-dismiss="modal">Ir a
+                    <button type="button" class="btn btn-primary donar cafe_claro" data-bs-dismiss="modal">Ir a donar</button>
+                    <button type="button" class="btn btn-primary adoptar cafe_claro" data-bs-dismiss="modal">Ir a
                         adoptar</button>
                 </div>
             </div>
