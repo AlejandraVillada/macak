@@ -199,77 +199,11 @@ $_SESSION['title'] = 'MACAK| Home ';
 </section> -->
 <div class="row d-flex text-center justify-content-center">
 
-    <h3>Titulo</h3>
+    <h3>Mascotas</h3>
 </div>
 
 <section>
-    <div class="row ">
-        <div class="col-lg-12 col-sm-10 col-md-10 d-flex justify-content-center">
-            <div class="col-lg-3 col-sm-10 col-md-10 m-2">
-                <div class="row"><img src="public/img/Mascota2.png" style="width: 200px;" alt="" srcset=""></div>
-                <div class="row">
-                    <h4>Fundación ...</h4>
-                </div>
-                <div class="row"> Descripción</div>
-            </div>
-            <div class="col-lg-3 col-sm-10 col-md-10 m-2">
-                <div class="row"><img src="public/img/Mascota1.png" style="width: 200px;" alt="" srcset=""></div>
-
-                <div class="row">
-                    <h4>Fundación ...</h4>
-                </div>
-                <div class="row"> Descripción</div>
-            </div>
-            <div class="col-lg-3 col-sm-10 col-md-10 m-2">
-                <div class="row"><img src="public/img/Mascota4.png" style="width: 200px;" alt="" srcset=""></div>
-                <div class="row">
-                    <h4>Fundación ...</h4>
-                </div>
-                <div class="row"> Descripción</div>
-            </div>
-        </div>
-
-        <!-- <div class="carta col-lg-4 m-2 " style="width: 20rem;">
-            <img src="public/img/logo_fondo_blanco.png" class="card-img-top rounded-3" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-            </div>
-        </div>
-        <div class="carta col-lg-4 m-2 " style="width: 20rem;">
-            <img src="public/img/logo_fondo_blanco.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-            </div>
-        </div>
-        <div class="carta col-lg-4 m-2 " style="width: 20rem;">
-            <img src="public/img/logo_fondo_blanco.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-            </div>
-        </div> -->
-
-
-    </div>
-
-
+    <div class="row" id="mascotas"></div>
+       
 </section>
 
-
-
-
-
-
-
-
-
-
-<?php
-
-//  include_once('templates/footer.php');
-?>

@@ -14,6 +14,13 @@ switch ($_GET['accion']) {
         $listado = $mascotas->lista();
         echo json_encode(array('data' => $listado), JSON_UNESCAPED_UNICODE);
         break;
+        
+    case 'listar_home':
+        $mascotas = new mascotas();
+        $listado = $mascotas->lista_home();
+        echo json_encode(array('data' => $listado), JSON_UNESCAPED_UNICODE);
+        break;
+    
     
         case 'consultar':
             $mascota = new mascotas();
