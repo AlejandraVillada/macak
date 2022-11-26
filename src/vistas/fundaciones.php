@@ -1,4 +1,9 @@
 <style>
+    h5 {
+        color: white;
+        font-family: 'Fredoka One', cursive;
+    }
+
     .carta_fundaciones {
 
         background-color: rgba(var(--bs-back-primary)) !important;
@@ -81,7 +86,7 @@
         filter: brightness(110%);
     }
 </style>
-
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <!-- Cartas de fundaciones -->
 <section class="fundaciones">
     <div class=" row titulo text-center mt-5 d-flex justify-content-center">

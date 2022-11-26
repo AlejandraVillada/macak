@@ -4,11 +4,18 @@
         font-family: 'Permanent Marker', cursive;
     }
 </style>
+<style>
+    h5 {
+        color: white;
+        font-family: 'Fredoka One', cursive;
+    }
+</style>
 
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
 <div class=" row titulo text-center mt-5 d-flex justify-content-center">
-        <div class=" bg-primary-plantilla " style="border-radius: 70px 10px; background-color:#273751 ;width: 500px; height:50px; text-align:center; vertical-align:middle;">
+        <div class=" bg-primary-plantilla " style="border-radius: 70px 10px; background-color:#273751 ;width: 300px; height:50px; text-align:center; vertical-align:middle;">
             <b>
                 <h5 class="text-white mt-2">ADOPCIÓN</h5>
             </b>

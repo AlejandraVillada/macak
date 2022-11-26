@@ -5,6 +5,10 @@ $_SESSION['title'] = 'MACAK| Home ';
 
 ?>
 <style>
+    h5 {
+        color: white;
+        font-family: 'Fredoka One', cursive;
+    }
     .body {
         align-items: center;
         background: #E3E3E3;
@@ -76,6 +80,7 @@ $_SESSION['title'] = 'MACAK| Home ';
         width: 300px;
     }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <section>
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

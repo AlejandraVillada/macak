@@ -1,4 +1,10 @@
 <style>
+
+    h5 {
+        color: white;
+        font-family: 'Fredoka One', cursive;
+    }
+
     .barra_navegacion {
 
         background-color: rgba(var(--bs-back-primary)) !important;
@@ -86,7 +92,7 @@
         filter: brightness(110%);
     }
 </style>
-
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <!-- <section>
         <div class="barra_navegacion">
 
