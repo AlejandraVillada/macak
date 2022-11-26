@@ -84,15 +84,16 @@ $_SESSION['title'] = 'MACAK| Home ';
 <section>
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+ 
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="public/img/Macak_Carrusel1.gif" class="d-block w-100" alt="...">
+        <div class="carousel-item active">
+                <img class="d-block w-100"  src="public/img/Macak_Carrusel1.gif"  alt="First slide ">
             </div>
             <div class="carousel-item">
-                <img src="public/img/Macak_Carrusel2.gif" class="d-block w-100" alt="...">
+                <img class="d-block w-100" src="public/img/Macak_Carrusel2.gif" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img src="public/img/Macak_Carrusel3.png" class="d-block w-100" alt="...">
+                <img class="d-block w-100" src="public/img/Macak_Carrusel3.png" alt="Third slide">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

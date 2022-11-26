@@ -82,7 +82,7 @@
         </div>
     </div>
 </section>
-<div class = "fl-row-content-wrap mt-5"><img src="public/img/Donaciones.png" ></div>
+<div class = "fl-row-content-wrap mt-4"><img src="public/img/Donaciones.png" ></div>
 
 
 
