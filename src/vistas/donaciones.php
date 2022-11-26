@@ -85,42 +85,6 @@
 <div class = "fl-row-content-wrap mt-4"><img src="public/img/Donaciones.png" ></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
     .carta_general {
 
