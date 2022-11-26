@@ -43,7 +43,7 @@ class mascotas extends ModeloConexionDB
             pets.raza,pets.URL_imagen, pets.estado, pets.activo
 			FROM pets
             Inner join fundaciones on(pets.id_fundacion=fundaciones.id)
-            ORDER BY pets.nombre ASC
+            ORDER BY pets.id DESC
 			limit 3";
 
         $this->obtener_resultados_query();
