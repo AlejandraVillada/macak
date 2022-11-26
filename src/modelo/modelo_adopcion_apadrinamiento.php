@@ -42,6 +42,7 @@ class mascotas extends ModeloConexionDB
             pets.raza,pets.URL_imagen, pets.estado, pets.activo
 			FROM pets
             Inner join fundaciones on(pets.id_fundacion=fundaciones.id)
+            where pets.estado != 'adoptado' and pets.estado !='pendiente_publicacion'
             ORDER BY pets.id DESC
 			limit 3";
 
