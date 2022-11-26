@@ -44,10 +44,14 @@
 <div class = "slider bg-primary-plantilla">
     <div class="text-center">
         <h2 class="text-white container">
-            Recuerda que puedes hacer donaciones en linea 
+            Donaciones en línea 
         </h2>
     </div>
 </div>
+
+<div class = "fl-row-content-wrap mt-4"><img src="public/img/Donaciones.png" ></div>
+
+
 
 
 
