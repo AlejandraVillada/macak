@@ -35,7 +35,6 @@
     }).done(function(aa) {
         console.log(aa);
         $.each(aa.data, function(index, value) {
-            if (value.estado == 'publicado') {
                 var URL_imagen;
                 if (value.URL_imagen == '') {
                     URL_imagen = 'public/img/logo.png';
@@ -62,7 +61,6 @@
                 );
 
                 // $("#mascotas").append("<div class='col-lg-12 col-sm-10 col-md-10 d-flex justify-content-center'><div class='col-lg-3 col-sm-10 col-md-10 m-2'><div class='row'><img src='" + value.URL_imagen + "' style='width: 200px;' alt='' srcset=''></div><div class='row'><h4>" + value.nombre + "</h4></div><div class='row'>" + value.descripcion + "</div></div></div>")
-            }
         });
     });
 </script>
