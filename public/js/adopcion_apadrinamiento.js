@@ -17,7 +17,7 @@ function adopcion_apadrinamiento() {
             } else {
                 URL_imagen = 'public/img/animales/' + value.URL_imagen;
             }
-            if (value.estado == 'publicado') {
+            if (value.estado != 'adoptado' && value.estado != 'pendiente_publicacion' ) {
                 $('#adopcion_apadrinamiento').append(
                         '<div class="profile-card-4 text-center col-lg-6 p-0">' +
                         ' <img src="' + URL_imagen + '" class="img img-responsive" style="height:280px; width:auto;">' +
