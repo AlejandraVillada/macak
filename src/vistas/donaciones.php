@@ -71,7 +71,7 @@
                     medicinas, elementos de aseo, arena para gatos, juguetes, camas, casas, entre otros.
                 </span>
                 <span style="font-size: 16px;">
-                    (Proximanente, esperalo!!!)
+                    (Proximamente, esperalo!!!)
                 </span>
             </p>   
         </div>
