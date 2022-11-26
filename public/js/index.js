@@ -3,7 +3,7 @@ $(' li a.listar').on('click', function(e) {
     // $('#contenido li ').on('click', function(e) {
     //     e.preventDefault();
     // });
-    $('#sesion_iniciada').fadeOut();
+    // $('#sesion_iniciada').fadeOut();
 
     var aID = $(this).attr('href');
 

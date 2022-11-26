@@ -24,16 +24,17 @@ switch ($accion) {
             $_SESSION['name'] = $resultado['name'];
             $_SESSION['email'] = $resultado['email'];
             $_SESSION['direccion'] = $resultado['direccion'];
+            $_SESSION['id_fundacion'] = $resultado['id_fundacion'];
             $_SESSION['pass'] = $pass;
             // var_dump($_SESSION);
             $respuesta = array(
-                'respuesta' => 'existe'
-
+                'respuesta' => 'existe',
+                'user_type'=>$resultado['user_type']
             );
         } else {
             $respuesta = array(
                 'respuesta' => 'no existe',
-
+                'user_type'=>''
             );
         }
         // var_dump($respuesta);

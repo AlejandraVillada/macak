@@ -9,7 +9,30 @@ function fundaciones() {
         console.log(fundacion);
         // $("#IdSede").append("<option value='" + value.IdSede + "'>" + value.NombreSede + "</option>");
         $.each(fundacion.data, function(index, value) {
-            $("#fundacion").append("<div class='card carta_fundaciones m-3 col-4' style='width: 18 rem; position: relative; left: 30 px;'><img src='"+value.URL_imagen+"' class='card-img-top' alt='...' style='border-radius: 100 % ; width:200 px; height:150 px; position:relative; left:35 px; top: 15 px;'><div class='card-body'><h5 class='card-title'>" + value.nombre + "</h5><button type='button' class='btn bg-secondary-plantilla vermas' data-bs-toggle='modal' data-bs-target='#detalle_fundacion' data-codigo='"+value.id+"' >Ver Mas</button></div></div>")
+            var URL_imagen;
+            if (value.URL_imagen == '') {
+                URL_imagen = 'public/img/logo.png';
+            } else {
+                URL_imagen = 'public/img/fundaciones/' + value.URL_imagen;
+            }
+            $("#fundacion").append(
+                '<div class="profile-card-4 text-center col-lg-6 p-0">' +
+                ' <img src="' + URL_imagen + '" class="img img-responsive" style="height:280px; width:auto;">' +
+                '    <div class="profile-content bg-primary-plantilla">' +
+                '        <div class="profile-description text-black">' +
+                '            <h5>' + value.nombre + '</h5>' +
+                '        </div>' +
+                '        <div class="row">' +
+                '            <div class="col-xs-4">' +
+                '                <div class="profile-overview">' +
+                '                <button type="button" class="btn bg-secondary-plantilla vermas text-white" data-bs-toggle="modal" data-bs-target="#detalle_fundacion" data-codigo="' + value.id + '">Ver Más</button>' +
+                '                </div>' +
+                '            </div>' +
+                '        </div>' +
+                '    </div>' +
+                '</div>'
+            );
+            // $("#fundacion").append("<div class='card carta_fundaciones m-3 col-4' style='width: 18 rem; position: relative; left: 30 px;'><img src='" + value.URL_imagen + "' class='card-img-top' alt='...' style='border-radius: 100 % ; width:200 px; height:150 px; position:relative; left:35 px; top: 15 px;'><div class='card-body'><h5 class='card-title'>" + value.nombre + "</h5><button type='button' class='btn bg-secondary-plantilla vermas' data-bs-toggle='modal' data-bs-target='#detalle_fundacion' data-codigo='" + value.id + "' >Ver Mas</button></div></div>")
         });
 
     });
@@ -31,7 +54,7 @@ function fundaciones() {
                 })
             } else {
                 $("#nombre_fundacion").text(fundacion.nombre);
-                $("#contenido_modal").append("<p>Descripcion : "+fundacion.descripcion+"</p><img src='"+fundacion.url_imagen+"' alt=''><p>Direccion: "+fundacion.direccion+"</p><p>Telefono : "+fundacion.telefono+"</p><p>Numero de cuenta: "+fundacion.numero_cuenta+"</p><p>Tipo de cuenta: "+fundacion.tipo_cuenta+"</p>");
+                $("#contenido_modal").append("<p>Descripcion : " + fundacion.descripcion + "</p><img src='" + fundacion.url_imagen + "' alt=''><p>Direccion: " + fundacion.direccion + "</p><p>Telefono : " + fundacion.telefono + "</p><p>Numero de cuenta: " + fundacion.numero_cuenta + "</p><p>Tipo de cuenta: " + fundacion.tipo_cuenta + "</p>");
             }
         });
 
@@ -62,8 +85,8 @@ function fundaciones() {
                 }
             });
         });
-    
-        
+
+
     });
 
 

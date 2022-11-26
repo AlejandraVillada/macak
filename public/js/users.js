@@ -42,7 +42,12 @@ function register() {
 
 
 }
+$('#sesion_iniciada').on('click', function(e) {
 
+    $('#sesion_iniciada').fadeOut();
+
+    $('#sesion_iniciada').fadeIn();
+})
 
 function login() {
 
@@ -64,10 +69,7 @@ function login() {
                     '',
                     'success'
                 )
-                $('#iniciar_sesion').fadeOut();
-                $('#registrarse').fadeOut();
-                $('#sesion_iniciada').fadeIn();
-                $('#cerrar_sesion_btn').fadeIn();
+
 
                 $.post('src/vistas/home.php', function(data) {
                     if ('src/vistas/home.php' != "#") {
@@ -75,6 +77,17 @@ function login() {
                     }
                 });
 
+                $('#iniciar_sesion').fadeOut();
+                $('#registrarse').fadeOut();
+                $('#sesion_iniciada').fadeIn();
+                $('#cerrar_sesion_btn').fadeIn();
+
+
+
+                if (resultado.user_type == '3') {
+                    console.log(resultado)
+                    $('#iniciar_administrador_fundaciones').fadeIn();
+                }
             } else {
                 Swal.fire({
                     icon: 'error',
@@ -87,5 +100,6 @@ function login() {
         });
 
     })
+
 
 }
