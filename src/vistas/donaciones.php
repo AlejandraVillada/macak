@@ -10,11 +10,19 @@
 <div class=" row titulo text-center mt-5 d-flex justify-content-center">
         <div class=" bg-primary-plantilla " style="border-radius: 70px 10px; background-color:#273751 ;width: 500px; height:50px; text-align:center; vertical-align:middle;">
             <b>
-                <h5 class="text-white">¡Con tu aporte nos ayudas a salvar más peluditos!   </h5>
+                <h5 class="text-white mt-2">ADOPCIÓN</h5>
             </b>
         </div>
     </div>
 <hr>
+
+<div class = "slider bg-primary-plantilla">
+    <div class="text-center">
+        <h2 class="text-white container">
+            ¡Con tu aporte nos ayudas a salvar más peluditos!
+        </h2>
+    </div>
+</div>
 
 <div class = "fl-row-content-wrap mt-4"><img src="public/img/perros.png" ></div>
 
